@@ -1,1 +1,5 @@
 /* Media Query Min Screen Size 425px */
+body {
+  grid-template-columns: 5vw 1fr 5vw;
+  grid-template-areas: "header header  header" "b1     content b2    " "footer footer  footer";
+}

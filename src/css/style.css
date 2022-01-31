@@ -9,7 +9,7 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template: minmax(5vh, auto) 1fr minmax(5vh, auto)/10% 1fr 10%;
+  grid-template: minmax(5vh, auto) 1fr minmax(5vh, auto)/1fr 1fr 1fr;
   grid-template-areas: "header  header  header " "content content content" "footer  footer  footer ";
   overflow-x: hidden;
 }
@@ -47,6 +47,9 @@ body {
 }
 
 .content {
+  display: grid;
+  grid-template: auto/1fr 1fr;
+  grid-auto-rows: 1fr;
   grid-area: content;
 }
 .content .intro {
@@ -54,6 +57,10 @@ body {
   border-radius: 0.5rem;
   margin: 0.5rem;
   box-shadow: 1px 1px 5px 3px var(--base_color);
+  grid-row: span 1;
+  grid-column: span 2;
+  align-self: flex-start;
+  justify-self: center;
 }
 .content .intro .intro__title {
   border-bottom: 2px solid var(--base_color);
