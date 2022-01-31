@@ -45,3 +45,36 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
+
+.content {
+  grid-area: content;
+}
+.content .intro {
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  box-shadow: 1px 1px 5px 3px var(--base_color);
+}
+.content .intro .intro__title {
+  border-bottom: 2px solid var(--base_color);
+  border-radius: 0.15rem;
+  margin: 0.25rem;
+  color: var(--font_black);
+  font: 700 1.25rem/120% "Roboto Condensed", sans-serif;
+  text-transform: capitalize;
+}
+.content .intro .intro__subtitle {
+  margin: 0.25rem;
+  color: var(--font_black);
+  font: 700 1rem/115% "Roboto", sans-serif;
+}
+.content .intro .intro__text {
+  margin: 0.15rem;
+  color: var(--font_black);
+  font: 400 1rem/110% "Roboto", sans-serif;
+}
+
+.footer {
+  background-color: var(--black_color);
+  grid-area: footer;
+}
