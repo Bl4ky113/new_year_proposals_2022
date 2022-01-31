@@ -1,5 +1,13 @@
-/* Media Query Min Screen Size 425px */
+/* Media Query Min Screen Size 730px */
+:root {
+  --max_width_obj: 80vw;
+}
+
 body {
-  grid-template-columns: 5vw 1fr 5vw;
+  grid-template-columns: 2.5vw 1fr 2.5vw;
   grid-template-areas: "header header  header" "b1     content b2    " "footer footer  footer";
+}
+
+.content .life-area {
+  grid-column: span 1;
 }

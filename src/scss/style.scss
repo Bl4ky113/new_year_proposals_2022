@@ -4,8 +4,11 @@ $base_color: var(--base_color);
 $light_color: var(--light_color);
 $dark_color: var(--dark_color);
 $black_color: var(--black_color);
+
 $font_white: var(--font_white);
 $font_black: var(--font_black);
+
+$max_width_obj: var(--max_width_obj);
 
 * { margin: 0; padding: 0; }
 
@@ -67,7 +70,6 @@ body {
 }
 
 .content {
-
     display: grid;
     grid-template: 
         auto /
@@ -76,41 +78,60 @@ body {
 
     grid-area: content;
 
-    .intro {
+    @mixin section_style($class_name, $dark, $base, $light) {
+        max-width: $max_width_obj;
+
         padding: 0.75rem 0.5rem;
         border-radius: 0.5rem;
         margin: 0.5rem;
 
-        box-shadow: 1px 1px 5px 3px $base_color;
+        box-shadow: 2px 3px 5px 0 $dark;
 
+        .#{$class_name}__title {
+            border-bottom: 2px solid $base;
+            border-radius: 0.15rem;
+            margin: 0.25rem;
+
+            color: $font_black;
+            font: 700 1.45rem/120% "Roboto Condensed", sans-serif;
+            text-transform: capitalize;
+        }
+        
+        .#{$class_name}__subtitle {
+            margin: 0.25rem;
+
+            color: $font_black;
+            font: 700 1.2rem/115% "Roboto", sans-serif;
+        }
+
+        .#{$class_name}__text {
+            margin: 0.15rem;
+
+            color: $font_black;
+            font: 400 1.05rem/110% "Roboto", sans-serif;
+        }
+    } 
+
+    @mixin changeColorVariables {
+        
+    }
+
+    .intro {
         grid-row: span 1;
         grid-column: span 2;
         align-self: flex-start;
         justify-self: center;
 
-        .intro__title {
-            border-bottom: 2px solid $base_color;
-            border-radius: 0.15rem;
-            margin: 0.25rem;
+        @include section_style("intro", $dark_color, $base_color, $light_color);
+    }
+    
+    .life-area {
+        grid-row: span 1;
+        grid-column: span 2;
+        align-self: center;
+        justify-self: center;
 
-            color: $font_black;
-            font: 700 1.25rem/120% "Roboto Condensed", sans-serif;
-            text-transform: capitalize;
-        }
-
-        .intro__subtitle {
-            margin: 0.25rem;
-
-            color: $font_black;
-            font: 700 1rem/115% "Roboto", sans-serif;
-        }
-
-        .intro__text {
-            margin: 0.15rem;
-
-            color: $font_black;
-            font: 400 1rem/110% "Roboto", sans-serif;
-        }
+        @include section_style("area", $dark_color, $base_color, $light_color);
     }
 }
 
