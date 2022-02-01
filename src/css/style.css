@@ -64,14 +64,16 @@ body {
   box-shadow: 2px 3px 5px 0 var(--dark_color);
 }
 .content .intro .intro__title {
-  border-bottom: 2px solid var(--base_color);
-  border-radius: 0.15rem;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 3px solid var(--base_color);
+  border-radius: 1rem/0.15rem;
   margin: 0.25rem;
   color: var(--font_black);
   font: 700 1.45rem/120% "Roboto Condensed", sans-serif;
   text-transform: capitalize;
 }
 .content .intro .intro__subtitle {
+  padding: 0.25rem 0.5rem;
   margin: 0.25rem;
   color: var(--font_black);
   font: 700 1.2rem/115% "Roboto", sans-serif;
@@ -80,6 +82,23 @@ body {
   margin: 0.15rem;
   color: var(--font_black);
   font: 400 1.05rem/110% "Roboto", sans-serif;
+}
+.content .intro .list {
+  padding: 0.5rem 0.5rem;
+  border-left: 2px solid var(--light_color);
+  margin: 0.25rem 1rem;
+  list-style: none;
+}
+.content .intro .list .li {
+  margin: 0.25rem;
+  color: var(--font_black);
+  font: 400 1.05rem/110% "Roboto", sans-serif;
+}
+.content .intro .list .li:before {
+  margin: 0 0.125rem;
+  content: "";
+  color: var(--light_color);
+  font: 500 1.05rem/110% "FontAwesome";
 }
 .content .life-area {
   grid-row: span 1;
@@ -93,14 +112,16 @@ body {
   box-shadow: 2px 3px 5px 0 var(--dark_color);
 }
 .content .life-area .area__title {
-  border-bottom: 2px solid var(--base_color);
-  border-radius: 0.15rem;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 3px solid var(--base_color);
+  border-radius: 1rem/0.15rem;
   margin: 0.25rem;
   color: var(--font_black);
   font: 700 1.45rem/120% "Roboto Condensed", sans-serif;
   text-transform: capitalize;
 }
 .content .life-area .area__subtitle {
+  padding: 0.25rem 0.5rem;
   margin: 0.25rem;
   color: var(--font_black);
   font: 700 1.2rem/115% "Roboto", sans-serif;
@@ -109,6 +130,80 @@ body {
   margin: 0.15rem;
   color: var(--font_black);
   font: 400 1.05rem/110% "Roboto", sans-serif;
+}
+.content .life-area .list {
+  padding: 0.5rem 0.5rem;
+  border-left: 2px solid var(--light_color);
+  margin: 0.25rem 1rem;
+  list-style: none;
+}
+.content .life-area .list .li {
+  margin: 0.25rem;
+  color: var(--font_black);
+  font: 400 1.05rem/110% "Roboto", sans-serif;
+}
+.content .life-area .list .li:before {
+  margin: 0 0.125rem;
+  content: "";
+  color: var(--light_color);
+  font: 500 1.05rem/110% "FontAwesome";
+}
+.content .life-area .start-icon {
+  display: inline-block;
+}
+.content .life-area .start-icon::before {
+  content: "";
+  margin: 0 0.25rem;
+  color: var(--financiera_base_color);
+  font: 500 1em "FontAwesome";
+}
+.content .life-area .continue-icon {
+  display: inline-block;
+}
+.content .life-area .continue-icon::before {
+  content: "";
+  margin: 0 0.25rem;
+  color: var(--laboral_base_color);
+  font: 500 1em "FontAwesome";
+}
+.content .life-area .stop-icon {
+  display: inline-block;
+}
+.content .life-area .stop-icon::before {
+  content: "";
+  margin: 0 0.25rem;
+  color: var(--salud_dark_color);
+  font: 500 1em "FontAwesome";
+}
+.content .life-area--academica {
+  --base_color: var(--academica_base_color);
+  --light_color: var(--academica_light_);
+  --dark_color: var(--academica_dark_color);
+}
+.content .life-area--laboral {
+  --base_color: var(--laboral_base_color);
+  --light_color: var(--laboral_light_);
+  --dark_color: var(--laboral_dark_color);
+}
+.content .life-area--salud {
+  --base_color: var(--salud_base_color);
+  --light_color: var(--salud_light_);
+  --dark_color: var(--salud_dark_color);
+}
+.content .life-area--financiera {
+  --base_color: var(--financiera_base_color);
+  --light_color: var(--financiera_light_);
+  --dark_color: var(--financiera_dark_color);
+}
+.content .life-area--personal {
+  --base_color: var(--personal_base_color);
+  --light_color: var(--personal_light_);
+  --dark_color: var(--personal_dark_color);
+}
+.content .life-area--bienestar {
+  --base_color: var(--bienestar_base_color);
+  --light_color: var(--bienestar_light_);
+  --dark_color: var(--bienestar_dark_color);
 }
 
 .footer {

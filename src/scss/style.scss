@@ -88,8 +88,9 @@ body {
         box-shadow: 2px 3px 5px 0 $dark;
 
         .#{$class_name}__title {
-            border-bottom: 2px solid $base;
-            border-radius: 0.15rem;
+            padding: 0.25rem 0.5rem; 
+            border-bottom: 3px solid $base;
+            border-radius: 1rem / 0.15rem;
             margin: 0.25rem;
 
             color: $font_black;
@@ -98,6 +99,7 @@ body {
         }
         
         .#{$class_name}__subtitle {
+            padding: 0.25rem 0.5rem;
             margin: 0.25rem;
 
             color: $font_black;
@@ -110,10 +112,35 @@ body {
             color: $font_black;
             font: 400 1.05rem/110% "Roboto", sans-serif;
         }
+
+        .list {
+            padding: 0.5rem 0.5rem;
+            border-left: 2px solid $light;
+            margin: 0.25rem 1rem;
+
+            list-style: none;
+
+            .li {
+                margin: 0.25rem;
+
+                color: $font_black;
+                font: 400 1.05rem/110% "Roboto", sans-serif;
+
+                &:before {
+                    margin: 0 0.125rem;
+
+                    content: "\f101";
+                    color: $light;
+                    font: 500 1.05rem/110% "FontAwesome";
+                }
+            }
+        }
     } 
 
-    @mixin changeColorVariables {
-        
+    @mixin changeColorVariables ($remplace_base, $remplace_light, $remplace_dark) {
+        --base_color: #{$remplace_base};
+        --light_color: #{$remplace_light};
+        --dark_color: #{$remplace_dark};
     }
 
     .intro {
@@ -132,6 +159,44 @@ body {
         justify-self: center;
 
         @include section_style("area", $dark_color, $base_color, $light_color);
+
+        $to_do_list:
+            "start" "\f058" var(--financiera_base_color), 
+            "continue" "\f056" var(--laboral_base_color),
+            "stop" "\f057" var(--salud_dark_color);
+
+        @each $to_do_name, $code, $color in $to_do_list {
+            .#{$to_do_name}-icon {
+                display: inline-block;
+
+                &::before {
+                    content: $code;
+    
+                    margin: 0 0.25rem;
+    
+                    color: $color;
+                    font: 500 1em "FontAwesome";
+                }
+            }
+        }
+    }
+
+    $life_areas: 
+        "academica",
+        "laboral",
+        "salud",
+        "financiera",
+        "personal",
+        "bienestar";
+
+    @each $area_name in $life_areas {
+        .life-area--#{$area_name} {
+            @include changeColorVariables(
+                var(--#{$area_name}_base_color), 
+                var(--#{$area_name}_light_),
+                var(--#{$area_name}_dark_color)
+            );
+        }
     }
 }
 
