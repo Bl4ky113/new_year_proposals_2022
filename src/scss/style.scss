@@ -156,7 +156,7 @@ body {
     .life-area {
         grid-row: span 1;
         grid-column: span 2;
-        align-self: center;
+        align-self: flex-start;
         justify-self: center;
 
         @include section_style("area", $dark_color, $base_color, $light_color);

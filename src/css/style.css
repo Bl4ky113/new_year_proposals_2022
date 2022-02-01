@@ -104,7 +104,7 @@ body {
 .content .life-area {
   grid-row: span 1;
   grid-column: span 2;
-  align-self: center;
+  align-self: flex-start;
   justify-self: center;
   max-width: var(--max_width_obj);
   padding: 0.75rem 0.5rem;
