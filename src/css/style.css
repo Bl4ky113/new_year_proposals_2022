@@ -49,7 +49,7 @@ body {
 .content {
   display: grid;
   grid-template: auto/1fr 1fr;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: auto;
   grid-area: content;
 }
 .content .intro {
@@ -67,19 +67,20 @@ body {
   padding: 0.25rem 0.5rem;
   border-bottom: 3px solid var(--base_color);
   border-radius: 1rem/0.15rem;
-  margin: 0.25rem;
+  margin: 0.5rem;
   color: var(--font_black);
   font: 700 1.45rem/120% "Roboto Condensed", sans-serif;
   text-transform: capitalize;
 }
 .content .intro .intro__subtitle {
-  padding: 0.25rem 0.5rem;
-  margin: 0.25rem;
+  padding: 0.25rem 0.35rem;
+  margin: 0.5rem;
   color: var(--font_black);
   font: 700 1.2rem/115% "Roboto", sans-serif;
+  text-transform: capitalize;
 }
 .content .intro .intro__text {
-  margin: 0.15rem;
+  margin: 0.5rem;
   color: var(--font_black);
   font: 400 1.05rem/110% "Roboto", sans-serif;
 }
@@ -115,19 +116,20 @@ body {
   padding: 0.25rem 0.5rem;
   border-bottom: 3px solid var(--base_color);
   border-radius: 1rem/0.15rem;
-  margin: 0.25rem;
+  margin: 0.5rem;
   color: var(--font_black);
   font: 700 1.45rem/120% "Roboto Condensed", sans-serif;
   text-transform: capitalize;
 }
 .content .life-area .area__subtitle {
-  padding: 0.25rem 0.5rem;
-  margin: 0.25rem;
+  padding: 0.25rem 0.35rem;
+  margin: 0.5rem;
   color: var(--font_black);
   font: 700 1.2rem/115% "Roboto", sans-serif;
+  text-transform: capitalize;
 }
 .content .life-area .area__text {
-  margin: 0.15rem;
+  margin: 0.5rem;
   color: var(--font_black);
   font: 400 1.05rem/110% "Roboto", sans-serif;
 }
@@ -177,33 +179,23 @@ body {
 }
 .content .life-area--academica {
   --base_color: var(--academica_base_color);
-  --light_color: var(--academica_light_);
+  --light_color: var(--academica_light_color);
   --dark_color: var(--academica_dark_color);
 }
 .content .life-area--laboral {
   --base_color: var(--laboral_base_color);
-  --light_color: var(--laboral_light_);
+  --light_color: var(--laboral_light_color);
   --dark_color: var(--laboral_dark_color);
 }
 .content .life-area--salud {
   --base_color: var(--salud_base_color);
-  --light_color: var(--salud_light_);
+  --light_color: var(--salud_light_color);
   --dark_color: var(--salud_dark_color);
 }
 .content .life-area--financiera {
   --base_color: var(--financiera_base_color);
-  --light_color: var(--financiera_light_);
+  --light_color: var(--financiera_light_color);
   --dark_color: var(--financiera_dark_color);
-}
-.content .life-area--personal {
-  --base_color: var(--personal_base_color);
-  --light_color: var(--personal_light_);
-  --dark_color: var(--personal_dark_color);
-}
-.content .life-area--bienestar {
-  --base_color: var(--bienestar_base_color);
-  --light_color: var(--bienestar_light_);
-  --dark_color: var(--bienestar_dark_color);
 }
 
 .footer {
